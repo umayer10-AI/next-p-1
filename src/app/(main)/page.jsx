@@ -1,21 +1,11 @@
-import LeftSide from '@/component/LeftSide';
-import MidSide from '@/component/MidSide';
-import RightSide from '@/component/RightSide';
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 const page = () => {
-  return (
-    <div className='max-w-[80%] mx-auto grid grid-cols-5 gap-5'>
-      
-      <LeftSide></LeftSide>
 
-      <div className='col-span-3'>
-        <MidSide></MidSide>
-      </div>
+  const id = '01'
 
-      <RightSide></RightSide>
-    </div>
-  );
+  return redirect(`/cart/${id}`)
 };
 
 export default page;

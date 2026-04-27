@@ -5,14 +5,14 @@ import React from "react";
 import { FaEye, FaStar } from "react-icons/fa";
 import ZeroLength from "./ZeroLength";
 
-const MidSide = async () => {
-  const data = await getPost("05");
+const MidSide = async ({id}) => {
+  const data = await getPost(id);
   console.log(data);
 
   return (
     <div>
       <h2 className="text-xl font-bold mb-3">Dragon News Home</h2>
-      <div>
+      <div className="flex flex-col gap-4">
         {data.length === 0 ? (
           <ZeroLength></ZeroLength>
         ) : (
