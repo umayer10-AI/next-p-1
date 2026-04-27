@@ -1,4 +1,5 @@
 import Header from '@/component/Header';
+import Press from '@/component/Press';
 import RightSide from '@/component/RightSide';
 import { getNews } from '@/lib/feching';
 import React from 'react';
@@ -21,7 +22,7 @@ const page = async ({params}) => {
                         <h2 className='text-2xl font-bold'>{data.title}</h2>
                         <h2>{data.details}</h2>
                                 
-                        <h2 className='btn btn-error text-white bg-red-600'><FaArrowLeftLong />All news in this category</h2>
+                        <Press></Press>
                     </div>
                 </div>
             <RightSide></RightSide>
