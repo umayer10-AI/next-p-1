@@ -1,6 +1,7 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
 import React from 'react';
+import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 
 const RightSide = () => {
 
@@ -36,6 +37,14 @@ const RightSide = () => {
                     <svg aria-label="Facebook logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="white" d="M8 12h5V8c0-6 4-7 11-6v5c-4 0-5 0-5 3v2h5l-1 6h-4v12h-6V18H8z"></path></svg>
                     Login with Facebook
                 </button>
+            </div>
+            <div className="my-10">
+            <h2 className="text-xl font-bold mb-3">Find Us On</h2>
+            <div>
+                <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-600 btn"><BsFacebook className="text-blue-600"/>Facebook</h2>
+                <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-600 btn"><BsTwitter className="text-blue-400"/>Twitter</h2>
+                <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-600 btn"><BsInstagram className="text-pink-600"/>Instagram</h2>
+                </div>
             </div>
         </div>
     );
