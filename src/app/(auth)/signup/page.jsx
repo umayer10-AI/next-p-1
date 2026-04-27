@@ -1,4 +1,6 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -8,12 +10,32 @@ const SignUpPage = () => {
     const {register,handleSubmit,watch,formState: { errors }} = useForm()
 
     const [c,setC] = useState(false)
+    const router = useRouter()
 
-    const a = (v) => {
+    const a = async (v) => {
         console.log(v)
+
+        const { data, error } = await authClient.signUp.email({
+            name: v.name,
+            email: v.email,
+            password: v.password,
+            image: v.url,
+            callbackURL: "/",
+        });
+
+        console.log({data,error})
+
+        if(data){
+            alert("Data successfully")
+            router.push('/')
+        }
+        if(error){
+            alert(error.message)
+        }
+
     }
 
-    console.log(errors)
+    // console.log(errors)
 
     return (
          <div>
