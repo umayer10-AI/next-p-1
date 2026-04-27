@@ -6,18 +6,21 @@ import React from 'react';
 const page = async ({params}) => {
 
     const {id} = await params
-    // console.log(id)
 
     return (
-        <div className='max-w-[80%] mx-auto grid grid-cols-5 gap-5'>
+        <div className='max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-5'>
       
-            <LeftSide id={id}></LeftSide>
+            <div className='order-2'>
+                <LeftSide id={id}></LeftSide>
+            </div>
 
-            <div className='col-span-3'>
+            <div className='lg:col-span-3 order-2'>
                 <MidSide id={id}></MidSide>
             </div>
 
-            <RightSide></RightSide>
+            <div className='order-1 lg:order-3'>
+                <RightSide></RightSide>
+            </div>
 
         </div>
     );

@@ -14,8 +14,8 @@ const page = async ({params}) => {
     return (
         <div className='max-w-[80%] mx-auto mb-20'>
             <Header></Header>
-            <div className='grid grid-cols-4 gap-5'>
-                <div className='col-span-3'>
+            <div className='grid lg:grid-cols-4 gap-5'>
+                <div className='lg:col-span-3'>
                     <h2 className='text-xl font-bold mb-3'>Dragon News</h2>
                     <div className='space-y-3 p-4 shadow-xl rounded-xl'>
                         <img src={data.image_url} alt="logo" className='w-full h-80 rounded-2xl object-cover' />
@@ -25,7 +25,9 @@ const page = async ({params}) => {
                         <Press></Press>
                     </div>
                 </div>
-            <RightSide></RightSide>
+            <div className='hidden lg:flex'>
+                <RightSide></RightSide>
+            </div>
             </div>
         </div>
     );

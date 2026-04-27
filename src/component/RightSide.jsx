@@ -43,7 +43,7 @@ const RightSide = () => {
                 </button>
             </div>
 
-            <div className="my-10">
+            <div className="my-10 hidden lg:block">
                 <h2 className="text-xl font-bold mb-3">Find Us On</h2>
                 <div>
                     <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-600 btn"><BsFacebook className="text-blue-600"/>Facebook</h2>
@@ -52,7 +52,7 @@ const RightSide = () => {
                 </div>
             </div>
 
-            <div className="my-10 bg-gray-100 p-3">
+            <div className="my-10 bg-gray-100 p-3 hidden lg:block">
                 <h2 className="text-xl font-bold mb-3">Q-Zone</h2>
                 <Image src={img1} alt="logo"></Image>
                 <Image src={img2} alt="logo"></Image>
